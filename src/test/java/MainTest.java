@@ -1,3 +1,4 @@
+import org.example.Weapon;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -5,7 +6,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 import org.example.Point;
 import org.example.Player;
-import org.example.Weapon;
 
 import java.lang.reflect.Field;
 
@@ -38,8 +38,8 @@ public class MainTest {
     @DisplayName("Point sınıf değişkenleri doğru tipte mi ?")
     @Test
     public void testPointTypes() {
-        assertThat(point.getX(), instanceOf(Integer.class));
-        assertThat(point.getY(), instanceOf(Integer.class));
+        assertThat(point.x(), instanceOf(Integer.class));
+        assertThat(point.y(), instanceOf(Integer.class));
     }
 
     @DisplayName("Parametre almayan distance methodu doğru çalışıyor mu ?")
